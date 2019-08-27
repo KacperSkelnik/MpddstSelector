@@ -9,6 +9,9 @@ Aby wyszczególnić pliki root'owe które mają zostać wczytane, należy:
 2) zmodyfikować nastepujące linijki:
     - for( Int_t iter=begin; iter<=end; ++iter){ //podajemy numery porządkowe folderów z danymi (begin i end)
     - fileName = "/eos/nica/mpd/data/Urqmd.4GeV/" + to_string(iter) + "/TestEvUrqmd/mpddst.root"; //podajemy ścieżkę do danych
+    LUB
+    - ifstream *istr = new ifstream("./urqmd34-11gev.list.txt");
+    W ZaLEŻNOŚCI OD POTRZEB 
 
 W celu zmiany liczyby "workers'ow" nalezy:
 
