@@ -4,11 +4,11 @@ void ReadAllRootFiles(TChain *dstTree){
 
 	//Add all exsisting mpddst.root files to chain
 	TString fileName;
-	//for( Int_t iter=260819; iter<=260820; ++iter){ 
-		//fileName = "/eos/nica/mpd/data/Urqmd.11GeV/" + to_string(iter) + "/TestEvUrqmd/mpddst.root";
-		fileName = "/home/kacper/work/MpddstSelectorCluster/mpddst.root";
+	for( Int_t iter=260819; iter<=260820; ++iter){ 
+		fileName = "/eos/nica/mpd/data/Urqmd.11GeV/" + to_string(iter) + "/TestEvUrqmd/mpddst.root";
+		//fileName = "/home/kacper/work/MpddstSelectorCluster/mpddst.root";
 		dstTree->Add(fileName.Data());
-		//}
+		}
 
 
 
