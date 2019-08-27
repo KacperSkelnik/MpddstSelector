@@ -1,0 +1,21 @@
+Instrukcja odpalania makra do analizy fizycznej danych z MPD, korzystającego z root'owego narzędzia proof
+
+1) W folderze należy mieć pliki MpddstSelector.C, MpddstSelector.h, ReadAllRootFiles.C, runAnalyze.sh
+2)./runAnalyze.sh
+
+Aby wyszczególnić pliki root'owe które mają zostać wczytane, należy:
+
+1) otworzyć plik ReadAllRootFiles.C w edytorze tekstowym 
+2) zmodyfikować nastepujące linijki:
+    - for( Int_t iter=begin; iter<=end; ++iter){ //podajemy numery porządkowe folderów z danymi (begin i end)
+    - fileName = "/eos/nica/mpd/data/Urqmd.4GeV/" + to_string(iter) + "/TestEvUrqmd/mpddst.root"; //podajemy ścieżkę do danych
+    LUB
+    - ifstream *istr = new ifstream("./urqmd34-11gev.list.txt");
+    W ZaLEŻNOŚCI OD POTRZEB 
+
+W celu zmiany liczyby "workers'ow" nalezy:
+
+1) otworzyć plik runAnalyze.sh w edytorze tekstowym
+2) zmienic linijke:
+	- TProof::Open("") na TProof::Open("", "workers=liczba")
+
